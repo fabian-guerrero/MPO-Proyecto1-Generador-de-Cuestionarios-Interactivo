@@ -4,10 +4,10 @@ def cargar_preguntas(listado_preguntas):
     return listado_preguntas
 
 def mostrar_pregunta(pregunta):
-    print(pregunta)
+    print("\n",pregunta)
 
 def obtener_respuesta():
-    validar_respuesta = input("Ingrese su respuesta: ").upper()
+    validar_respuesta = input("\nIngrese su respuesta: ").upper()
     while validar_respuesta != "A" and validar_respuesta != "B" and validar_respuesta != "C" and validar_respuesta != "D":
         validar_respuesta = input("Debe ingresar una respuesta valida (A, B, C o D): ").upper()
 
@@ -22,7 +22,7 @@ def corregir_respuesta(respuesta, correcta):
 
 
 def mostrar_resultados(aciertos, total):
-    print(f"Total de preguntas: {total}")
+    print(f"\nTotal de preguntas: {total}")
     print(f"Aciertos: {aciertos}")
     print(f"Porcentaje de aciertos: {(aciertos*100)/total}%")
 
