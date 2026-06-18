@@ -1,4 +1,6 @@
 import json
+from inputimeout import inputimeout, TimeoutOccurred
+
 
 def cargar_preguntas(listado_preguntas):
     return listado_preguntas
@@ -7,11 +9,19 @@ def mostrar_pregunta(pregunta):
     print("\n",pregunta)
 
 def obtener_respuesta():
-    validar_respuesta = input("\nIngrese su respuesta: ").upper()
-    while validar_respuesta != "A" and validar_respuesta != "B" and validar_respuesta != "C" and validar_respuesta != "D":
-        validar_respuesta = input("Debe ingresar una respuesta valida (A, B, C o D): ").upper()
+    """ Funcion que obtiene la respuesta y la valida. Ademas agrega un limite de tiempo para la respuesta
+    utilizando la libreria inputimeout https://pypi.org/project/inputimeout/
+"""
+    try:
+        validar_respuesta = inputimeout(prompt="\nIngrese su respuesta: ", timeout=8).upper()
+        while validar_respuesta != "A" and validar_respuesta != "B" and validar_respuesta != "C" and validar_respuesta != "D":
+            validar_respuesta = inputimeout(prompt="Debe ingresar una respuesta valida (A, B, C o D): ", timeout=5).upper()
 
-    return validar_respuesta
+        return validar_respuesta
+
+    except TimeoutOccurred:
+        print("\n¡Se acabo el tiempo para responder!")
+        return None
 
 def corregir_respuesta(respuesta, correcta):
     if respuesta == correcta:
@@ -31,7 +41,7 @@ def mostrar_resultados(aciertos, total):
 def menu():
     print("""
 ### MENÚ ###
-1 - Empezar cuestionario
+1 - Empezar cuestionario (Tienes 8 segundos para ingresar la respuesta)
 2 - Salir
 """)
 
