@@ -1,8 +1,5 @@
 import json
 
-with open('cuestionarios/paises_y_capitales.json', 'r', encoding='utf-8') as archivo:
-    datos = json.load(archivo)
-
 def cargar_preguntas(listado_preguntas):
     return listado_preguntas
 
@@ -20,8 +17,8 @@ def corregir_respuesta(respuesta, correcta):
     if respuesta == correcta:
         print("Respuesta correcta")
         return True
-    else:
-        print("Respuesta incorrecta")
+
+    print("Respuesta incorrecta")
 
 
 def mostrar_resultados(aciertos, total):
@@ -39,11 +36,33 @@ def menu():
     seleccion = int(input("Seleccione una opcion: "))
     return seleccion
 
-opcion_seleccionada = menu()
+def seleccionar_tema():
+    print("""
+### SELECCIONE UN CUESTIONARIO ###
+1 - Paises y capitales
+2 - Universo Mario Bros
+3 - Universo Pokemon
+""")
 
-preguntas = cargar_preguntas(datos)
+    tema_seleccionado = int(input("Seleccione un tema: "))
+    match tema_seleccionado:
+        case 1:
+            nombre_tema = "cuestionarios/paises_y_capitales.json"
+        case 2:
+            nombre_tema = "cuestionarios/mario_bros.json"
+        case 3:
+            nombre_tema = "cuestionarios/pokemon.json"
+
+    with open(nombre_tema, 'r', encoding='utf-8') as archivo:
+        datos = json.load(archivo)
+
+    return datos
+
+preguntas = cargar_preguntas(seleccionar_tema())
 preguntas_correctas = 0
 PREGUNTAS_TOTALES = len(preguntas)
+
+opcion_seleccionada = menu()
 
 while opcion_seleccionada != 2:
 
