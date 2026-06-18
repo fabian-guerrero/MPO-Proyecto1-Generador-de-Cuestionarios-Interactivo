@@ -1,0 +1,102 @@
+[
+    {
+        "pregunta": "¿Cuál es el nombre completo de Mario?",
+        "opciones": ["A. Mario Mario", "B. Mario Luigi", "C. Mario Bros", "D. Mario Jumpman"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Qué objeto hace que Mario se vuelva más grande?",
+        "opciones": ["A. Flor de Fuego", "B. Super Champiñón", "C. Estrella", "D. Champiñón 1-UP"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cómo se llama el villano principal de la saga?",
+        "opciones": ["A. Wario", "B. Bowser", "C. Donkey Kong", "D. King Boo"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué poder otorga la Flor de Fuego?",
+        "opciones": ["A. Volar", "B. Lanzar bolas de fuego", "C. Ser invencible", "D. Correr más rápido"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿En qué juego apareció por primera vez Yoshi?",
+        "opciones": ["A. Super Mario World", "B. Super Mario Bros 3", "C. Super Mario 64", "D. Super Mario Galaxy"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cuál es el nombre del hermano de Mario?",
+        "opciones": ["A. Waluigi", "B. Luigi", "C. Blue Mario", "D. Giuseppe"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué enemigo es una tortuga con caparazón?",
+        "opciones": ["A. Goomba", "B. Koopa Troopa", "C. Boo", "D. Shy Guy"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué objeto concede invencibilidad temporal?",
+        "opciones": ["A. Super Champiñón", "B. Flor de Fuego", "C. Estrella", "D. Champiñón Venenoso"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cómo se llama la princesa que Bowser secuestra constantemente?",
+        "opciones": ["A. Rosalina", "B. Peach", "C. Daisy", "D. Toadstool"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué power-up permite a Mario volar con capa?",
+        "opciones": ["A. Super Hoja", "B. Capa de Tanooki", "C. Ala de Pájaro", "D. Super Plumilla"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es el primer juego de la saga Super Mario?",
+        "opciones": ["A. Super Mario Bros", "B. Donkey Kong", "C. Mario Bros", "D. Super Mario Land"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Qué hace un Champiñón 1-UP?",
+        "opciones": ["A. Te da una vida extra", "B. Te hace más grande", "C. Te da invencibilidad", "D. Te hace más rápido"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cómo se llama el dinosaurio amigo de Mario?",
+        "opciones": ["A. Yoshi", "B. Boshi", "C. Kamek", "D. Toad"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Qué tipo de ataque usa Bowser con más frecuencia?",
+        "opciones": ["A. Lanzar bolas de fuego", "B. Escupir espinas", "C. Saltar y aplastar", "D. Lanzar martillos"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿En qué consola se lanzó Super Mario 64?",
+        "opciones": ["A. Nintendo 64", "B. Super Nintendo", "C. Nintendo GameCube", "D. Nintendo Wii"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Qué personaje es el líder de los Toads?",
+        "opciones": ["A. Toad", "B. Toadette", "C. Capitán Toad", "D. Toadsworth"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es el efecto de un Champiñón Venenoso?",
+        "opciones": ["A. Te hace más pequeño", "B. Te quita una vida", "C. Te hace invencible", "D. Te da velocidad"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué juego de Mario es de carreras?",
+        "opciones": ["A. Super Mario RPG", "B. Mario Kart", "C. Mario Party", "D. Super Mario Sunshine"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cómo se llama el fantasma que aparece en las mansiones de Luigi?",
+        "opciones": ["A. Boo", "B. Poltergust", "C. King Boo", "D. E. Gadd"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Qué objeto permite a Mario nadar mejor en ciertos juegos?",
+        "opciones": ["A. Traje de Rana", "B. Aleta de Pez", "C. Traje de Pingüino", "D. Champiñón Acuático"],
+        "respuesta_correcta": "A"
+    }
+]

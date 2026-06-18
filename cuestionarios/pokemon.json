@@ -1,0 +1,102 @@
+[
+    {
+        "pregunta": "¿Cuál es el tipo principal de Pikachu?",
+        "opciones": ["A. Agua", "B. Eléctrico", "C. Fuego", "D. Planta"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿A qué tipo pertenece Charizard?",
+        "opciones": ["A. Fuego / Volador", "B. Fuego / Dragón", "C. Fuego / Tierra", "D. Fuego / Lucha"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cuál de estos Pokémon es de tipo Agua?",
+        "opciones": ["A. Bulbasaur", "B. Charmander", "C. Squirtle", "D. Eevee"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿En qué generación apareció Lucario por primera vez?",
+        "opciones": ["A. Tercera", "B. Cuarta", "C. Quinta", "D. Sexta"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cómo se llama la región de los juegos Pokémon Rubí y Zafiro?",
+        "opciones": ["A. Kanto", "B. Johto", "C. Hoenn", "D. Sinnoh"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es la evolución de Eevee que usa una Piedra Hielo?",
+        "opciones": ["A. Vaporeon", "B. Flareon", "C. Jolteon", "D. Glaceon"],
+        "respuesta_correcta": "D"
+    },
+    {
+        "pregunta": "¿Qué Pokémon es conocido como el 'Pokémon Espejismo'?",
+        "opciones": ["A. Mew", "B. Mewtwo", "C. Ditto", "D. Zoroark"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuántas evoluciones tiene Eevee en total (hasta la octava generación)?",
+        "opciones": ["A. 6", "B. 7", "C. 8", "D. 9"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es el tipo de Gengar?",
+        "opciones": ["A. Fantasma / Veneno", "B. Fantasma / Siniestro", "C. Fantasma / Psíquico", "D. Fantasma / Hada"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Qué movimiento de tipo Fuego tiene una precisión del 100%?",
+        "opciones": ["A. Llamarada", "B. Ascuas", "C. Sofoco", "D. Pirotecnia"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es el Pokémon inicial de tipo Planta en la región de Johto?",
+        "opciones": ["A. Bulbasaur", "B. Chikorita", "C. Treecko", "D. Turtwig"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué Pokémon legendario es el maestro de los tres pájaros legendarios de Kanto?",
+        "opciones": ["A. Lugia", "B. Ho-Oh", "C. Rayquaza", "D. Zapdos"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cuál de estos Pokémon es de tipo Siniestro?",
+        "opciones": ["A. Alakazam", "B. Umbreon", "C. Espeon", "D. Gardevoir"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cómo se llama la habilidad que permite a Ditto transformarse en el rival?",
+        "opciones": ["A. Copión", "B. Transformación", "C. Imitación", "D. Mimetismo"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué tipo es eficaz contra el tipo Agua?",
+        "opciones": ["A. Fuego", "B. Tierra", "C. Eléctrico", "D. Planta"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿En qué juego apareció por primera vez el Pokémon Mew?",
+        "opciones": ["A. Rojo y Azul", "B. Oro y Plata", "C. Rubí y Zafiro", "D. Amarillo"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cuál es la forma regional de Meowth en Alola?",
+        "opciones": ["A. Tipo Normal", "B. Tipo Siniestro", "C. Tipo Hada", "D. Tipo Acero"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué movimiento de tipo Hada es súper efectivo contra Dragón?",
+        "opciones": ["A. Beso Amoroso", "B. Brillo Mágico", "C. Caricia", "D. Voz Cautivadora"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cómo se llama el profesor Pokémon de la región de Sinnoh?",
+        "opciones": ["A. Profesor Oak", "B. Profesor Elm", "C. Profesor Rowan", "D. Profesor Birch"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es el Pokémon número 001 en la Pokédex Nacional?",
+        "opciones": ["A. Pikachu", "B. Bulbasaur", "C. Charmander", "D. Squirtle"],
+        "respuesta_correcta": "B"
+    }
+]
