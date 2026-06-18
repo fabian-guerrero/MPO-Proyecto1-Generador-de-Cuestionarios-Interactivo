@@ -26,6 +26,8 @@ def mostrar_resultados(aciertos, total):
     print(f"Aciertos: {aciertos}")
     print(f"Porcentaje de aciertos: {(aciertos*100)/total}%")
 
+
+
 def menu():
     print("""
 ### MENÚ ###
@@ -45,6 +47,10 @@ def seleccionar_tema():
 """)
 
     tema_seleccionado = int(input("Seleccione un tema: "))
+
+    while (tema_seleccionado < 1 or tema_seleccionado >3):
+        tema_seleccionado = int(input("Debe ingresar una respuesta valida (1, 2 o 3): "))
+
     match tema_seleccionado:
         case 1:
             nombre_tema = "cuestionarios/paises_y_capitales.json"
