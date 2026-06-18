@@ -1,31 +1,10 @@
-def cargar_preguntas():
-    return [
-    {
-        "pregunta": "¿Cuál es la capital de Francia?",
-        "opciones": ["A. Madrid", "B. Roma", "C. París", "D. Berlín"],
-        "respuesta_correcta": "C"
-    },
-    {
-        "pregunta": "¿Cuál es la capital de Japón?",
-        "opciones": ["A. Seúl", "B. Pekín", "C. Bangkok", "D. Tokio"],
-        "respuesta_correcta": "D"
-    },
-    {
-        "pregunta": "¿Cuál es la capital de Argentina?",
-        "opciones": ["A. Santiago", "B. Buenos Aires", "C. Montevideo", "D. Lima"],
-        "respuesta_correcta": "B"
-    },
-    {
-        "pregunta": "¿Cuál es la capital de Egipto?",
-        "opciones": ["A. El Cairo", "B. Alejandría", "C. Luxor", "D. Asuán"],
-        "respuesta_correcta": "A"
-    },
-    {
-        "pregunta": "¿Cuál es la capital de Australia?",
-        "opciones": ["A. Sídney", "B. Melbourne", "C. Canberra", "D. Brisbane"],
-        "respuesta_correcta": "C"
-    }
-]
+import json
+
+with open('cuestionarios/paises_y_capitales.json', 'r', encoding='utf-8') as archivo:
+    datos = json.load(archivo)
+
+def cargar_preguntas(listado_preguntas):
+    return listado_preguntas
 
 def mostrar_pregunta(pregunta):
     print(pregunta)
@@ -62,7 +41,7 @@ def menu():
 
 opcion_seleccionada = menu()
 
-preguntas = cargar_preguntas()
+preguntas = cargar_preguntas(datos)
 preguntas_correctas = 0
 PREGUNTAS_TOTALES = len(preguntas)
 

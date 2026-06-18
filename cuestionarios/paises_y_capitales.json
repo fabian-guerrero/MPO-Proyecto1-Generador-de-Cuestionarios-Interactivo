@@ -1,0 +1,102 @@
+[
+    {
+        "pregunta": "¿Cuál es la capital de Francia?",
+        "opciones": ["A. Madrid", "B. Roma", "C. París", "D. Berlín"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Japón?",
+        "opciones": ["A. Seúl", "B. Pekín", "C. Bangkok", "D. Tokio"],
+        "respuesta_correcta": "D"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Argentina?",
+        "opciones": ["A. Santiago", "B. Buenos Aires", "C. Montevideo", "D. Lima"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Egipto?",
+        "opciones": ["A. El Cairo", "B. Alejandría", "C. Luxor", "D. Asuán"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Australia?",
+        "opciones": ["A. Sídney", "B. Melbourne", "C. Canberra", "D. Brisbane"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Canadá?",
+        "opciones": ["A. Toronto", "B. Vancouver", "C. Montreal", "D. Ottawa"],
+        "respuesta_correcta": "D"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Italia?",
+        "opciones": ["A. Milán", "B. Roma", "C. Nápoles", "D. Turín"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de India?",
+        "opciones": ["A. Bombay", "B. Calcuta", "C. Nueva Delhi", "D. Bangalore"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Rusia?",
+        "opciones": ["A. San Petersburgo", "B. Moscú", "C. Kiev", "D. Vladivostok"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Sudáfrica?",
+        "opciones": ["A. Johannesburgo", "B. Ciudad del Cabo", "C. Pretoria", "D. Durban"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Brasil?",
+        "opciones": ["A. Brasilia", "B. Río de Janeiro", "C. São Paulo", "D. Salvador"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Alemania?",
+        "opciones": ["A. Múnich", "B. Fráncfort", "C. Hamburgo", "D. Berlín"],
+        "respuesta_correcta": "D"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Portugal?",
+        "opciones": ["A. Oporto", "B. Lisboa", "C. Faro", "D. Coímbra"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de México?",
+        "opciones": ["A. Guadalajara", "B. Monterrey", "C. Ciudad de México", "D. Puebla"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de China?",
+        "opciones": ["A. Shanghái", "B. Pekín", "C. Hong Kong", "D. Cantón"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Grecia?",
+        "opciones": ["A. Salónica", "B. Atenas", "C. Patras", "D. Heraclión"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Turquía?",
+        "opciones": ["A. Estambul", "B. Esmirna", "C. Ankara", "D. Adana"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Noruega?",
+        "opciones": ["A. Bergen", "B. Estocolmo", "C. Helsinki", "D. Oslo"],
+        "respuesta_correcta": "D"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Nueva Zelanda?",
+        "opciones": ["A. Auckland", "B. Wellington", "C. Christchurch", "D. Hamilton"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Colombia?",
+        "opciones": ["A. Medellín", "B. Cali", "C. Barranquilla", "D. Bogotá"],
+        "respuesta_correcta": "D"
+    }
+]
