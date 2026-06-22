@@ -34,7 +34,20 @@ def corregir_respuesta(respuesta, correcta):
 def mostrar_resultados(aciertos, total):
     print(f"\nTotal de preguntas: {total}")
     print(f"Aciertos: {aciertos}")
-    print(f"Porcentaje de aciertos: {(aciertos*100)/total}%")
+    porcentaje_aciertos = (aciertos*100)/total
+    print(f"Porcentaje de aciertos: {porcentaje_aciertos}%")
+
+    match True:
+        case _ if porcentaje_aciertos == 100:
+            print("¡Perfecto! Obtuviste la puntuación máxima!")
+        case _ if porcentaje_aciertos >= 90:
+            print("Exelente trabajo")
+        case _ if porcentaje_aciertos >= 80:
+            print("¡Muy bien!")
+        case _ if porcentaje_aciertos >= 60:
+            print("¡Buen intento! Aun tienes mucho para mejorar")
+        case _:
+            print("¡Sigue practicando y vuelve a intentarlo!")
 
 
 
