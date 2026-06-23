@@ -9,11 +9,12 @@ def mostrar_pregunta(pregunta):
     print("\n",pregunta)
 
 def obtener_respuesta():
-    """ Funcion que obtiene la respuesta y la valida. Ademas agrega un limite de tiempo para la respuesta
+    """ Funcion que obtiene la respuesta y la valida.
+    Ademas agrega un limite de tiempo para la respuesta
     utilizando la libreria inputimeout https://pypi.org/project/inputimeout/
 """
     try:
-        validar_respuesta = inputimeout(prompt="\nIngrese su respuesta: ", timeout=8).upper()
+        validar_respuesta = inputimeout(prompt="\nIngrese su respuesta: ", timeout=10).upper()
         while validar_respuesta != "A" and validar_respuesta != "B" and validar_respuesta != "C" and validar_respuesta != "D":
             validar_respuesta = inputimeout(prompt="Debe ingresar una respuesta valida (A, B, C o D): ", timeout=5).upper()
 
@@ -49,16 +50,23 @@ def mostrar_resultados(aciertos, total):
         case _:
             print("¡Sigue practicando y vuelve a intentarlo!")
 
+    datos_usuario = f"{nombre_usuario}: {preguntas_correctas} puntos"
+    with open("resultados_de_usuarios.txt", "a", encoding="utf-8") as fichero:
+        fichero.write(datos_usuario + "\n")
+
 
 
 def menu():
     print("""
 ### MENÚ ###
-1 - Empezar cuestionario (Tienes 8 segundos para ingresar la respuesta)
+1 - Empezar cuestionario (Tienes 10 segundos para ingresar la respuesta)
 2 - Salir
 """)
 
     seleccion = int(input("Seleccione una opcion: "))
+    while (seleccion < 1 or seleccion > 2):
+        seleccion = int(input("Debe ingresar una respuesta valida (1 o 2): "))
+
     return seleccion
 
 def seleccionar_tema():
@@ -87,15 +95,19 @@ def seleccionar_tema():
 
     return datos
 
-preguntas = cargar_preguntas(seleccionar_tema())
 preguntas_correctas = 0
-PREGUNTAS_TOTALES = len(preguntas)
+preguntas_totales = 0
+nombre_usuario = input("Ingrese su nombre: ")
 
 opcion_seleccionada = menu()
 
 while opcion_seleccionada != 2:
 
     if opcion_seleccionada == 1:
+        preguntas = cargar_preguntas(seleccionar_tema())
+        preguntas_correctas = 0
+        preguntas_totales = len(preguntas)
+
         for items in preguntas:
             mostrar_pregunta(items["pregunta"])
             opciones = items["opciones"]
@@ -106,6 +118,6 @@ while opcion_seleccionada != 2:
             if respuesta_correcta:
                 preguntas_correctas += 1
 
-    opcion_seleccionada = menu()
+    mostrar_resultados(preguntas_correctas, preguntas_totales)
 
-mostrar_resultados(preguntas_correctas, PREGUNTAS_TOTALES)
+    opcion_seleccionada = menu()
