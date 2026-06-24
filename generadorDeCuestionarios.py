@@ -130,9 +130,9 @@ preguntas_correctas = 0
 preguntas_totales = 0
 nombre_usuario = input("Ingrese su nombre: ")
 
-opcion_seleccionada = menu()
+while True:
 
-while opcion_seleccionada != 3:
+    opcion_seleccionada = menu()
 
     if opcion_seleccionada == 1:
         preguntas = cargar_preguntas(seleccionar_tema())
@@ -160,4 +160,10 @@ while opcion_seleccionada != 3:
         else:
             print("El ranking esta vacio")
 
-    opcion_seleccionada = menu()
+    elif opcion_seleccionada == 3:
+        print("Has abandonado el juego")
+        break
+    else:
+        print("Has seleccionado una opcion no valida. Vuelve a intentarlo")
+
+    # opcion_seleccionada = menu()
