@@ -14,9 +14,11 @@ def obtener_respuesta():
     Ademas agrega un limite de tiempo para la respuesta
     utilizando la libreria inputimeout https://pypi.org/project/inputimeout/
 """
+
+    respuestas_posibles = ["A","B","C","D"]
     try:
         validar_respuesta = inputimeout(prompt="\nIngrese su respuesta: ", timeout=10).upper()
-        while validar_respuesta != "A" and validar_respuesta != "B" and validar_respuesta != "C" and validar_respuesta != "D":
+        while validar_respuesta not in respuestas_posibles:
             validar_respuesta = inputimeout(prompt="Debe ingresar una respuesta valida (A, B, C o D): ", timeout=5).upper()
 
         return validar_respuesta
@@ -165,5 +167,3 @@ while True:
         break
     else:
         print("Has seleccionado una opcion no valida. Vuelve a intentarlo")
-
-    # opcion_seleccionada = menu()
