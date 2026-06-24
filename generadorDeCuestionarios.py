@@ -1,4 +1,5 @@
 import json
+import os
 from inputimeout import inputimeout, TimeoutOccurred
 
 
@@ -51,8 +52,8 @@ def mostrar_resultados(aciertos, total):
             print("¡Sigue practicando y vuelve a intentarlo!")
 
     datos_usuario = f"{nombre_usuario}: {preguntas_correctas} puntos"
-    with open("resultados_de_usuarios.txt", "a", encoding="utf-8") as fichero:
-        fichero.write(datos_usuario + "\n")
+    with open("resultados_de_usuarios.txt", "a", encoding="utf-8") as archivo_resultados:
+        archivo_resultados.write(datos_usuario + "\n")
 
 
 
@@ -60,12 +61,13 @@ def menu():
     print("""
 ### MENÚ ###
 1 - Empezar cuestionario (Tienes 10 segundos para ingresar la respuesta)
-2 - Salir
+2 - Ranking
+3 - Salir
 """)
 
     seleccion = int(input("Seleccione una opcion: "))
-    while (seleccion < 1 or seleccion > 2):
-        seleccion = int(input("Debe ingresar una respuesta valida (1 o 2): "))
+    while (seleccion < 1 or seleccion > 3):
+        seleccion = int(input("Debe ingresar una respuesta valida (1, 2 o 3): "))
 
     return seleccion
 
@@ -90,10 +92,39 @@ def seleccionar_tema():
         case 3:
             nombre_tema = "cuestionarios/pokemon.json"
 
-    with open(nombre_tema, 'r', encoding='utf-8') as archivo:
-        datos = json.load(archivo)
+    with open(nombre_tema, 'r', encoding='utf-8') as archivo_tema:
+        datos = json.load(archivo_tema)
 
     return datos
+
+def agregar_a_ranking(nombre, puntos):
+    puntos_usuario = {"usuario": nombre, "puntos": puntos}
+
+    print(puntos_usuario)
+
+    if os.path.exists("ranking.json") and os.path.getsize("ranking.json") > 0:
+        with open("ranking.json", 'r', encoding='utf-8') as archivo_ranking:
+            ranking = json.load(archivo_ranking)
+    else:
+        ranking = []
+
+    ranking.append(puntos_usuario)
+
+    with open("ranking.json", 'w', encoding='utf-8') as archivo_ranking:
+        json.dump(ranking, archivo_ranking, indent=4)
+
+    return ranking
+
+def obtener_puntos(usuario):
+    return usuario["puntos"]
+
+def ver_ranking(ranking_usuarios):
+    ranking_descendente = sorted(ranking_usuarios, key=obtener_puntos, reverse=True)
+
+    print("\n### RANKING ###")
+    for usuario in ranking_descendente:
+        print(f"{usuario['usuario']}: {usuario['puntos']} puntos")
+
 
 preguntas_correctas = 0
 preguntas_totales = 0
@@ -101,7 +132,7 @@ nombre_usuario = input("Ingrese su nombre: ")
 
 opcion_seleccionada = menu()
 
-while opcion_seleccionada != 2:
+while opcion_seleccionada != 3:
 
     if opcion_seleccionada == 1:
         preguntas = cargar_preguntas(seleccionar_tema())
@@ -118,6 +149,15 @@ while opcion_seleccionada != 2:
             if respuesta_correcta:
                 preguntas_correctas += 1
 
-    mostrar_resultados(preguntas_correctas, preguntas_totales)
+        agregar_a_ranking(nombre_usuario, preguntas_correctas)
+        mostrar_resultados(preguntas_correctas, preguntas_totales)
+
+    elif opcion_seleccionada == 2:
+        if os.path.exists("ranking.json") and os.path.getsize("ranking.json") > 0:
+            with open("ranking.json", 'r', encoding='utf-8') as archivo:
+                datos_ranking = json.load(archivo)
+                ver_ranking(datos_ranking)
+        else:
+            print("El ranking esta vacio")
 
     opcion_seleccionada = menu()
