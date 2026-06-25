@@ -1,19 +1,24 @@
+""" Modulo json que permite trabajar creando y leyendo archivos de dicho formato
+https://docs.python.org/3/library/json.html
+"""
 import json
 import os
 from inputimeout import inputimeout, TimeoutOccurred
 
 
 def cargar_preguntas(listado_preguntas):
+    """ Funcion que retorna el listado de preguntas seleccionadas """
     return listado_preguntas
 
 def mostrar_pregunta(pregunta):
+    """ Funcion que muestra la pregunta por consola """
     print("\n",pregunta)
 
 def obtener_respuesta():
     """ Funcion que obtiene la respuesta y la valida.
     Ademas agrega un limite de tiempo para la respuesta
     utilizando la libreria inputimeout https://pypi.org/project/inputimeout/
-"""
+    """
 
     respuestas_posibles = ["A","B","C","D"]
     try:
@@ -28,14 +33,19 @@ def obtener_respuesta():
         return None
 
 def corregir_respuesta(respuesta, correcta):
+    """ Funcion que verifica si la respuesta ingresada es correcto """
     if respuesta == correcta:
         print("Respuesta correcta")
         return True
 
     print("Respuesta incorrecta")
+    return None
 
 
 def mostrar_resultados(aciertos, total):
+    """ Funcion que muestra el numero total de preguntas, la cantidad de aciertos,
+    el porcentaje de aciertos y una valoracion final
+    """
     print(f"\nTotal de preguntas: {total}")
     print(f"Aciertos: {aciertos}")
     porcentaje_aciertos = (aciertos*100)/total
@@ -60,6 +70,7 @@ def mostrar_resultados(aciertos, total):
 
 
 def menu():
+    """ Funcion que muestra por consola el menu principal de la aplicacion """
     print("""
 ### MENÚ ###
 1 - Empezar cuestionario (Tienes 10 segundos para ingresar la respuesta)
@@ -74,6 +85,7 @@ def menu():
     return seleccion
 
 def seleccionar_tema():
+    """ Funcion que muestra por consola el menu para seleccionar el tema del cuestionario """
     print("""
 ### SELECCIONE UN CUESTIONARIO ###
 1 - Paises y capitales
@@ -100,6 +112,7 @@ def seleccionar_tema():
     return datos
 
 def agregar_a_ranking(nombre, puntos):
+    """ Funcion que agrega el nombre de usuario y los puntos obtenidos al archivo ranking.json """
     puntos_usuario = {"usuario": nombre, "puntos": puntos}
 
     print(puntos_usuario)
@@ -118,9 +131,14 @@ def agregar_a_ranking(nombre, puntos):
     return ranking
 
 def obtener_puntos(usuario):
+    """ Funcion toma un usuarioy lo retorna a la funcion ver_ranking para ordenar
+    los usuarios por puntuacion obtenida"""
     return usuario["puntos"]
 
 def ver_ranking(ranking_usuarios):
+    """ Funcion que lee los datos del archivo ranking.json, los ordena de forma descendente
+    y los muestra por consola
+    """
     ranking_descendente = sorted(ranking_usuarios, key=obtener_puntos, reverse=True)
 
     print("\n### RANKING ###")
