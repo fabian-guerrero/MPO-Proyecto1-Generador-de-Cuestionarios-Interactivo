@@ -22,9 +22,11 @@ def obtener_respuesta():
 
     respuestas_posibles = ["A","B","C","D"]
     try:
+        # El parametro prompt debe contener el mensaje que se vera en consola
+        # El parametro timeout debe contener el tiempo limite para realizar la accion en segundoo
         validar_respuesta = inputimeout(prompt="\nIngrese su respuesta: ", timeout=10).upper()
         while validar_respuesta not in respuestas_posibles:
-            validar_respuesta = inputimeout(prompt="Debe ingresar una respuesta valida (A, B, C o D): ", timeout=5).upper()
+            validar_respuesta = inputimeout(prompt="Debe ingresar una respuesta valida (A, B, C o D): ", timeout=10).upper()
 
         return validar_respuesta
 
@@ -64,6 +66,10 @@ def mostrar_resultados(aciertos, total):
             print("¡Sigue practicando y vuelve a intentarlo!")
 
     datos_usuario = f"{nombre_usuario}: {preguntas_correctas} puntos"
+    # La funcion open recibe como primer parametro el nombre del archivo. El segundo parametro es
+    # el modo: "r" para lectura, "w" para escritura y "a" para escribir al final del archivo. El
+    # parametro encoding indica que juego de caracteres utilizar para realizar operaciones sobre
+    # el archivo.
     with open("resultados_de_usuarios.txt", "a", encoding="utf-8") as archivo_resultados:
         archivo_resultados.write(datos_usuario + "\n")
 
