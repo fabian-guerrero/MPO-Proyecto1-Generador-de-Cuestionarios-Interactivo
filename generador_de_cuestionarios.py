@@ -26,6 +26,7 @@ def obtener_respuesta():
         # El parametro timeout debe contener el tiempo limite para realizar la accion en segundoo
         validar_respuesta = inputimeout(prompt="\nIngrese su respuesta: ", timeout=10).upper()
         while validar_respuesta not in respuestas_posibles:
+            # pylint: disable=line-too-long
             validar_respuesta = inputimeout(prompt="Debe ingresar una respuesta valida (A, B, C o D): ", timeout=10).upper()
 
         return validar_respuesta
